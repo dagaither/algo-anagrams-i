@@ -28,7 +28,6 @@ def anagrams_for(word, list_of_words):
 				matches += j
 		if len(matches) == len(word):
 			result.append(matches)
-	print(result)
 	return result
 
 
