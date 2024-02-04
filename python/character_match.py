@@ -19,6 +19,16 @@ def is_character_match(string1, string2):
 		return False
 
 # Part 2
-# def anagrams_for(word, list_of_words):
-# 	# your code here
-# 	pass
+def anagrams_for(word, list_of_words):
+	result = []
+	for item in list_of_words:
+		matches = ""
+		for j in item:
+			if j in word:
+				matches += j
+		if len(matches) == len(word):
+			result.append(matches)
+	print(result)
+	return result
+
+
