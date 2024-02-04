@@ -2,11 +2,23 @@
 
 # Part 1
 def is_character_match(string1, string2):
-	# Your code here
-	pass
+	match1 = ""
+	match2 = ""
+	
+	for i in string1.lower():
+		if i.isalnum() and i in string2.lower():
+			match1 += i
 
+	for i in string2.lower():
+		if i.isalnum() and i in string1.lower():
+			match2 += i
+	
+	if len(match1) == len(match2):
+		return True
+	else:
+		return False
 
 # Part 2
-def anagrams_for(word, list_of_words):
-	# your code here
-	pass
+# def anagrams_for(word, list_of_words):
+# 	# your code here
+# 	pass
